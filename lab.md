@@ -1,4 +1,4 @@
-## Part 1 - Bugs
+# Part 1 - Bugs
 
 ```java
 static void reverseInPlace(int[] arr) {
@@ -32,13 +32,13 @@ public void testReverseInPlace() {
 
 **The symptom, as the output of running the tests**
 
-# Failed Test
+**Failed Test**
 ![Image](InputFail.png)
 ![Image](InputFail1.png)
-# Passed Test
+**Passed Test**
 ![Image](InputPass.png)
 
-# Bug Code Before and After
+## Bug Code Before and After
 **Before**
 ```java
 static void reverseInPlace(int[] arr) {
@@ -62,7 +62,7 @@ the end of the array. However, this overwrites the original values before they a
 up to half of the array length and using a temporary variable `temp` to store the original value before it is swapped. Therefore, each 
 element is swapped with its corresponding element from the end of the array without overwriting the original values prematurely.
 
-## Part 2 - Researching Commands
+# Part 2 - Researching Commands
 
 1. **Case-Insensitive Search:**  
 Option: `-i` or `--ignore-case`
