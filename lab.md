@@ -1,6 +1,6 @@
 ## Part 1 - Bugs
 
-```
+```java
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
@@ -10,7 +10,7 @@ static void reverseInPlace(int[] arr) {
 
 **A failure-inducing input for the buggy program, as a JUnit test**
 
-```
+```java
 @Test 
 	public void testReverseInPlace() {
     int[] input1 = {1,2, 3 };
@@ -21,7 +21,7 @@ static void reverseInPlace(int[] arr) {
 
 **An input that doesn't induce a failure**
 
-```
+```java
 @Test 
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
@@ -40,7 +40,7 @@ static void reverseInPlace(int[] arr) {
 
 # Bug Code Before and After
 **Before**
-```
+```java
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
@@ -48,7 +48,7 @@ static void reverseInPlace(int[] arr) {
   }
 ```
 **After**
-```
+```java
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length / 2; i += 1) {
       int temp = arr[i];
@@ -64,31 +64,25 @@ element is swapped with its corresponding element from the end of the array with
 
 ## Part 2 - Researching Commands
 
-1. **Case-Insensitive Search:**
-   
-Option: `-i` or `--ignore-case`
+1. **Case-Insensitive Search:**  
+<br>Option: `-i` or `--ignore-case`
+<br>Example: `grep -i "pattern" filename`
+<br>This option makes the search case-insensitive, allowing you to find matches regardless of uppercase or lowercase.
 
-Example: `grep -i "pattern" filename`
-
-This option makes the search case-insensitive, allowing you to find matches regardless of uppercase or lowercase.
-
-3. **Counting the Number of Matches:**
-   
-Option: `-c` or `--count`
-
-Example: `grep -c "pattern" filename`
-
-Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
+2. **Counting the Number of Matches:**
+<br>Option: `-c` or `--count`
+<br>Example: `grep -c "pattern" filename`
+<br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
 pattern in the provided file(s).
 
-5. **Displaying Line Numbers with Matches:**
-Option: `-n` or `--line-number`
-Example: `grep -n "pattern" filename`
-Explanation: This option makes it easy to find the exact location of the pattern in the file by displaying the line numbers and the matched
+3. **Displaying Line Numbers with Matches:**
+<br>Option: `-n` or `--line-number`
+<br>Example: `grep -n "pattern" filename`
+<br>Explanation: This option makes it easy to find the exact location of the pattern in the file by displaying the line numbers and the matched
 lines.
 
-6. **Recursive Search in Directories:**
-Option: `-r `or `-R` or `--recursive`
-Example: `grep -r "pattern" directory`
-Explanation: This option enables grep to do a recursive search for the given pattern across all files in the specified directory and all of
+4. **Recursive Search in Directories:**
+<br>Option: `-r `or `-R` or `--recursive`
+<br>Example: `grep -r "pattern" directory`
+<br>Explanation: This option enables grep to do a recursive search for the given pattern across all files in the specified directory and all of
 its subdirectories. It is helpful for doing comprehensive directory structure searches.
