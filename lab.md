@@ -12,31 +12,31 @@ static void reverseInPlace(int[] arr) {
 
 ```java
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input1 = {1,2, 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3,2,1 }, input1);
-	}
+}
 ```
 
 **An input that doesn't induce a failure**
 
 ```java
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
 ```
 
 **The symptom, as the output of running the tests**
 
 # Failed Test
-![Image](FailInput.png)
-![Image](FailInput1.png)
+![Image](InputFail.png)
+![Image](InputFail1.png)
 # Passed Test
-![Image](PassInput.png)
+![Image](InputPass.png)
 
 # Bug Code Before and After
 **Before**
@@ -65,7 +65,7 @@ element is swapped with its corresponding element from the end of the array with
 ## Part 2 - Researching Commands
 
 1. **Case-Insensitive Search:**  
-<br>Option: `-i` or `--ignore-case`
+Option: `-i` or `--ignore-case`
 <br>Example: `grep -i "pattern" filename`
 <br>This option makes the search case-insensitive, allowing you to find matches regardless of uppercase or lowercase.
 
@@ -84,5 +84,4 @@ lines.
 4. **Recursive Search in Directories:**
 <br>Option: `-r `or `-R` or `--recursive`
 <br>Example: `grep -r "pattern" directory`
-<br>Explanation: This option enables grep to do a recursive search for the given pattern across all files in the specified directory and all of
-its subdirectories. It is helpful for doing comprehensive directory structure searches.
+<br>Explanation: This option enables grep to do a recursive search for the given pattern across all files in the specified directory and all of its subdirectories. It is helpful for doing comprehensive directory structure searches.
