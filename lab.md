@@ -64,12 +64,12 @@ element is swapped with its corresponding element from the end of the array with
 
 ## Part 2 - Researching Commands
 
-1.**Case-Insensitive Search:**
+1. **Case-Insensitive Search:**
 Option: `-i` or `--ignore-case`
 Example: `grep -i "pattern" filename`
 This option makes the search case-insensitive, allowing you to find matches regardless of uppercase or lowercase.
 
-2.**Counting the Number of Matches:**
+2. **Counting the Number of Matches:**
 Option: `-c` or `--count`
 Example: `grep -c "pattern" filename`
 Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
