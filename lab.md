@@ -65,23 +65,29 @@ element is swapped with its corresponding element from the end of the array with
 ## Part 2 - Researching Commands
 
 1. **Case-Insensitive Search:**
+   
 Option: `-i` or `--ignore-case`
+
 Example: `grep -i "pattern" filename`
+
 This option makes the search case-insensitive, allowing you to find matches regardless of uppercase or lowercase.
 
-2. **Counting the Number of Matches:**
+3. **Counting the Number of Matches:**
+   
 Option: `-c` or `--count`
+
 Example: `grep -c "pattern" filename`
+
 Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
 pattern in the provided file(s).
 
-3. **Displaying Line Numbers with Matches:**
+5. **Displaying Line Numbers with Matches:**
 Option: `-n` or `--line-number`
 Example: `grep -n "pattern" filename`
 Explanation: This option makes it easy to find the exact location of the pattern in the file by displaying the line numbers and the matched
 lines.
 
-5. **Recursive Search in Directories:**
+6. **Recursive Search in Directories:**
 Option: `-r `or `-R` or `--recursive`
 Example: `grep -r "pattern" directory`
 Explanation: This option enables grep to do a recursive search for the given pattern across all files in the specified directory and all of
