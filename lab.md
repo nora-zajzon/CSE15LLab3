@@ -178,6 +178,9 @@ element is swapped with its corresponding element from the end of the array with
 <br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory. The fixed string is identifying the string "souble" within the text.
 
 Work Cited:
+
 https://man7.org/linux/man-pages/man1/grep.1.html
+
 https://chat.openai.com/
+
 Prompts include: generate a regular expression for grep to find a pattern with the following syntax: [  an unspecified number ]
