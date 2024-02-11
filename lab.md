@@ -221,4 +221,3 @@ pattern in each text file in the working directoy. (Output was shortened)
 
 Work Cited:
 https://man7.org/linux/man-pages/man1/grep.1.html
-https://chat.openai.com/
