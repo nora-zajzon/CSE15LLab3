@@ -102,7 +102,7 @@ element is swapped with its corresponding element from the end of the array with
           accomplished with the computer program QPOWA [ 30 31 ]
           constants obtained from model studies [ 24 32 ]
           for equatorial donor group i [ 24 ] . Similar equations`
-<br> This command line option allows the grep to interpret patterns as extended regular expressions within the text file given. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ]
+<br> This command line option allows the grep command to interpret patterns as extended regular expressions within the text file given. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ]
 <br> Command Line with working directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -E '\[ [0-9 ]+ \]' --directories=recurse`
 <br> Output
 <br> `./1471-2202-4-3.txt:          of the precursor [see [ 31 ] ]. Another possibility could
@@ -112,7 +112,7 @@ element is swapped with its corresponding element from the end of the array with
 `<br>`./1471-2202-4-3.txt:          human brain of Haines [ 36 ] , and the same atlas was
 `<br>`./1471-2202-4-3.txt:          addition, the atlas of Paxinos et al. [ 37 ] was
 `<br>`./1471-2202-4-3.txt:          series of densities [ 38 ]` . . . 
-<br> This command line option allows the grep to interpret patterns as extended regular expressions within the working directory. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ] (Output was shortened)
+<br> This command line option allows the grep command to interpret patterns as extended regular expressions within the working directory. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ] (Output was shortened)
 
 2. **Option: `-v`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -v 'e' 1471-2091-2-9.txt`
