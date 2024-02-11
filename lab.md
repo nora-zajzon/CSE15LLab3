@@ -102,7 +102,7 @@ element is swapped with its corresponding element from the end of the array with
           accomplished with the computer program QPOWA [ 30 31 ]
           constants obtained from model studies [ 24 32 ]
           for equatorial donor group i [ 24 ] . Similar equations`
-<br> This command line option allows the grep to interpret patterns as extended regular expressions within the text file given.
+<br> This command line option allows the grep to interpret patterns as extended regular expressions within the text file given. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ]
 <br> Command Line with working directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -E '\[ [0-9 ]+ \]' --directories=recurse`
 <br> Output
 <br> `./1471-2202-4-3.txt:          of the precursor [see [ 31 ] ]. Another possibility could
@@ -112,108 +112,70 @@ element is swapped with its corresponding element from the end of the array with
 `<br>`./1471-2202-4-3.txt:          human brain of Haines [ 36 ] , and the same atlas was
 `<br>`./1471-2202-4-3.txt:          addition, the atlas of Paxinos et al. [ 37 ] was
 `<br>`./1471-2202-4-3.txt:          series of densities [ 38 ]` . . . 
-<br> This command line option allows the grep to interpret patterns as extended regular expressions within the working directory. (Output was shortened)
+<br> This command line option allows the grep to interpret patterns as extended regular expressions within the working directory. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ] (Output was shortened)
 
-
-2. **Option: `-c` or `--count`:**
-<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -c -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
-<br> Output: `35`
-<br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
-pattern in the provided file.
-<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -c -E '\[ [0-9 ]+ \]' --directories=recurse`
+2. **Option: `-v`:**
+<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -v 'e' 1471-2091-2-9.txt`
+<br> Output: `Background
+`<br>`catalytic function [ 12 ] . Substitution of H59 in ACR1
+`<br>`A and 
+`<br>`CD39.
+`<br>`VO 2+as cofactor
+`<br>`2 ] 
+`<br>`activity.`
+<br>Explanation: This option displays all lines in the specified text file that do not contain the specified 'pattern' which in this case is e (returns all lines that do not use e).
+<br>Command Line for directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -v ' ' --directories=recurse`
 <br> Output:
-<br>`./1472-6807-2-2.txt:30
-`<br>`./1471-2350-4-3.txt:29
-`<br>`./1471-2156-2-3.txt:0
-`<br>`./1471-2156-3-11.txt:16
-`<br>`./1471-2121-3-10.txt:48
-`<br>`./1471-2172-3-4.txt:31
-`<br>`./gb-2002-4-1-r2.txt:0
-`<br>`./gb-2003-4-6-r41.txt:20
-`<br>`./1471-2466-1-1.txt:29` . . .
-<br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
-pattern in each text file in the working directoy. (Output was shortened)
+<br>`n./1472-6807-2-2.txt:
+`<br>`./1471-2350-4-3.txt:
+`<br>`./1471-2156-2-3.txt:
+`<br>`./1471-2156-3-11.txt:
+`<br>`./1471-2121-3-10.txt:
+`<br>`./1471-2172-3-4.txt:
+`<br>`./gb-2002-4-1-r2.txt:` . . .
+<br>Explanation: This option displays all lines in the all text files in the working directory that do not contain the specified 'pattern' which in this case is ' ' (returns all lines that are empty).(Output was shortened)
 
-3. **Option: `-n` or `--line-number`:**
-<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
+3. **Option: `-n` and `-G`:**
+<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -G '21' 1471-2091-2-9.txt`
 <br> Output:
-<br> `10:        ATPases [ 1 ] . Three isoforms that differ in the ratio of
-`<br>`16:        secretion, regulation of hemostasis and ectokinases [ 1 ] .
-`<br>`31:        [ 1 ] . The specific activities of NTPDases vary over a
-`<br>`34:        [ 9 10 ] . Sequence comparisons indicate that most of
-`<br>`36:        conserved region, ACR1 - ACR5 [ 9 11 ] . However, the
-`<br>`39:        respectively [ 9 ] .
-`<br>`45:        catalytic function [ 12 ] . Substitution of H59 in ACR1
-`<br>`47:        dependent manner [ 13 ] . Mutation of W187A in ACR3
-`<br>`50:        ADPase activity [ 14 ] . Mutations of D62 and G64 of ACR1
-`<br>`54:        superfamily [ 15 ] . These results suggest that the
-`<br>`63:        carboxypeptidase [ 16 ] , S-adenosylmethionine synthetase [
-`<br>`64:        17 18 ] , pyruvate kinase [ 19 20 ] , and F 
+<br> `44:        catalysis. E174 in ACR3 and S218 in ACR4 are required for
+`<br>`51:        and D219 and G221 of ACR4 demonstrated that the nucleotide
 `<br>`65:        1 -ATPase [ 21 22 ] . This cation
-`<br>`68:        cofactor [ 23 ] . Vanadyl has one axial and four equatorial
-`<br>`75:        equatorial metal ligands [ 24 ] , binding of VO 2+to CD39
-`<br>`80:        purified from insect cells [ 25 ] . Only one
-`<br>`123:          the nature of VO 2+equatorial ligands [ 22 ] . Of the
+`<br>`135:          21 ] . The intensity of -5/2 
 `<br>`140:          || but not A⊥ [ 21 26 ] . In this
-`<br>`152:          presence of metal [ 25 ] .
-`<br>`251:        ligand [ 24 27 ] . By studying the EPR spectra of bound VO
+`<br>`248:        21 ] because the g and A tensors of the 51V hyperfine
 `<br>`260:        decreased rate when VO 2+replaces Mg 2+ [ 21 ] .
-`<br>`266:        only one nucleotide binding site [ 25 ] . The g and A
-`<br>`273:        1 -ATPase [ 22 28 ] , the γ- and
 `<br>`280:        1 -ATPase [ 21 ] , pyruvate kinase [ 19
-`<br>`281:        20 ] , AdoMet synthetase [ 17 18 ] , and carboxypeptidase [
-`<br>`290:        hydrolysis [ 25 ] , sCD39 probably has two conformations
-`<br>`297:        protein [ 2 25 ] . The two EPR species observed with VO
-`<br>`323:        that only ATP analogs were detected on sCD39 [ 25 ] .
-`<br>`334:        groups [ 25 ] . When ADP is the substrate and generates
-`<br>`394:          cultured as described by Chen and Guidotti [ 25 ] .
-`<br>`395:          Soluble CD39 were purified as described [ 25 ] with some
-`<br>`438:          according to Houseman et al. [ 21 ] . Dissolved molecular
-`<br>`455:          accomplished with the computer program QPOWA [ 30 31 ]
-`<br>`462:          constants obtained from model studies [ 24 32 ]
-`<br>`473:          for equatorial donor group i [ 24 ] . Similar equations`
-<br>Explanation: This option makes it easy to find the exact location of the pattern in the file by displaying the line numbers as a prefix and the matched lines.
-<br>Command Line for directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -E '\[ [0-9 ]+ \]' --directories=recurse`
+`<br>`346:        on ACR3, D213 (D219 in HB6) and S218 on ACR4 dramatically
+`<br>`355:        This hydroxyl group (S218?) probably interacts with the
+`<br>`359:        hydrolysis is likely contributed by D213 since it is close
+`<br>`360:        to S218.
+`<br>`438:          according to Houseman et al. [ 21 ] . Dissolved molecular`
+<br>Explanation: This option makes it easy to find the exact location of the pattern in the file by displaying the line numbers as a prefix and the matched lines. -G option interprets patterns as basic regular expressions, in this case "soluble".
+<br>Command Line for directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -G 'non-hydrolyzable' --directories=recursee`
 <br> Output:
-<br>`./1471-2202-4-3.txt:328:          of the precursor [see [ 31 ] ]. Another possibility could
-`<br>`./1471-2202-4-3.txt:338:          [ 22 32 ] , in which we did not find NK-ir perikarya.
-`<br>`./1471-2202-4-3.txt:361:          somatostatin have been observed [ 33 34 ] . This
-`<br>`./1471-2202-4-3.txt:365:          indicated [ 15 ] . Finally, we hope that our study will
-`<br>`./1471-2202-4-3.txt:372:          disease [ 8 ] .
-`<br>`./1471-2202-4-3.txt:460:          human brain of Haines [ 36 ] , and the same atlas was
-`<br>`./1471-2202-4-3.txt:462:          addition, the atlas of Paxinos et al. [ 37 ] was
-`<br>`./1471-2202-4-3.txt:475:          series of densities [ 38 ] .` . . .
-<br>Explanation: This option makes it easy to find the exact location of the pattern in the files in the working directory by displaying the line numbers as a prefix and the matched lines. (Output was shortened)
+<br>`./1471-2091-2-9.txt:264:        non-hydrolyzable analog of ATP) complexed with VO 2+was
+`<br>`./1471-2199-3-7.txt:37:        stable complexes with non-hydrolyzable ApppA in which two
+`<br>`./1471-2164-3-18.txt:595:        presence of either Mg.ATP or a non-hydrolyzable ATP-analog`
+<br>Explanation: This option makes it easy to find the exact location of the pattern in the files in the working directory by displaying the line numbers as a prefix and the matched lines.  -G option interprets patterns as basic regular expressions, in this case "non-hydrolyzable".
 
-7. **Option: `-m NUM` or `--max-count=NUM`:**
-<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
+7. **Option: `-m NUM` and `-F`:**
+<br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -F 'soluble' 1471-2091-2-9.txt`
 <br> Output:
-<br>`ATPases [ 1 ] . Three isoforms that differ in the ratio of
-        secretion, regulation of hemostasis and ectokinases [ 1 ] .
-        [ 1 ] . The specific activities of NTPDases vary over a`
-<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in the specified text file.
-<br>Command Line for directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
+<br>`Recently we reported that a recombinant soluble CD39,
+        soluble CD39 in the presence of Ca 2+when non-hydrolysable
+        purified soluble CD39. The possible metal ligands for VO`
+<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in the specified text file. The fixed string is identifying the string "souble" within the text.
+<br>Command Line for directory: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -E '\[ [0-9 ]+ \]' --directories=recurse`
 <br> Output:
-<br>`./1471-213X-2-8.txt:          cells [ 7 ] . These cells express several members of the
-`<br>`./1472-6793-1-12.txt:        cross-bridge cycling and 20% to calcium cycling [ 2 ] .
-`<br>`./1472-6793-1-12.txt:        myocytes [ 3 4 ] , examining the energetic effects of
-`<br>`./1472-6793-1-12.txt:        Consistent with this Brandes et al [ 5 ] have studied the
-`<br>`./1471-2199-4-4.txt:        [ 1 ] , interleukin-12 [ 2 ] , and human endostatin [ 3 ] .
-`<br>`./1471-2199-4-4.txt:        [ 4 5 ] . However, the kinetics of the vector encoded
-`<br>`./1471-2199-4-4.txt:        transaminase levels [ 6 ] - a marker of hepatolysis -
-`<br>`./1471-2199-4-5.txt:        several organisms - in bacteria [ 1 2 ] , yeast [ 3 ] and
-`<br>`./1471-2199-4-5.txt:        chicken cells [ 4 ] .
-`<br>`./1471-2199-4-5.txt:        altered replication (for review, see [ 5 ] ). DNA ds breaks
-`<br>`./1471-2369-3-1.txt:        most common cause of end-stage renal disease [ 2 ] ,
-`<br>`./1471-2369-3-1.txt:        high-salt diet [ 5 ] . The pathology is identical to human
-`<br>`./1471-2369-3-1.txt:        and associates [ 6 ] .
-`<br>`./1471-2229-2-8.txt:        stands when compared to southern-selected cultivars [ 1 ] .
-`<br>`./1471-2229-2-8.txt:        naturally in the autumn after planting [ 2 ] . It also may
-`<br>`./1471-2229-2-8.txt:        at near freezing temperatures [ 3 ] . Kenefick and Swanson
-`<br>`./1471-2474-4-8.txt:        daily to treat hyperlipidemia with few side effects [ 7 ] .
-`<br>`./1471-2474-4-8.txt:        [ 8 ] . Data from the National Health and Nutrition
-`<br>`./1471-2474-4-8.txt:        annually [ 9 ] .` . . .
-<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory.
+<br>`./bcr620.txt:        with cell lines show that tumor cells can bind soluble OPN
+`<br>`./1471-2156-4-5.txt:        function. Disease-causing myocilin mutants are less soluble
+`<br>`./1471-2180-2-22.txt:        systems, forming a fluorescent, insoluble CTC-formazan. The
+`<br>`./1472-6807-2-1.txt:        high-resolution structure of a soluble acetylcholine
+`<br>`./ar130.txt:        physical support and critical soluble factors [ 43]. Our
+`<br>`./1471-2253-2-5.txt:          the alveolar values. For extremely soluble solutes such
+`<br>`./1471-2091-2-13.txt:        as a soluble protein in the .` . . .
+<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory. The fixed string is identifying the string "souble" within the text.
 
 Work Cited:
 https://man7.org/linux/man-pages/man1/grep.1.html
