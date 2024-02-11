@@ -183,4 +183,7 @@ https://man7.org/linux/man-pages/man1/grep.1.html
 
 https://chat.openai.com/
 
-Prompts include: generate a regular expression for grep to find a pattern with the following syntax: [  an unspecified number ]
+Prompts include: 
+- generate a regular expression for grep to find a pattern with the following syntax: [  an unspecified number ]
+- explain what --directories=recurse does
+- explanation on what grep -v 'pattern' your_file.txt does
