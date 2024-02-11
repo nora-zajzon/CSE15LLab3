@@ -65,7 +65,7 @@ element is swapped with its corresponding element from the end of the array with
 # Part 2 - Researching Commands
 
 1. **Case-Insensitive Search:**  
-Option: ` -E` or `--extended-regexp`
+Option: `-E` or `--extended-regexp`
 <br>Command Line with text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output: 
 <br> `ATPases [ 1 ] . Three isoforms that differ in the ratio of
@@ -117,7 +117,7 @@ Option: ` -E` or `--extended-regexp`
 
 
 2. **Counting the Number of Matches:**
-<br> Option: ` -c` or `--count`
+<br> Option: `-c` or `--count`
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -c -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output: `35`
 <br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
@@ -137,7 +137,7 @@ pattern in the provided file.
 pattern in each text file in the working directoy. (Output was shortened)
 
 4. **Displaying Line Numbers with Matches:**
-<br> Option: ` -n` or `--line-number`
+<br> Option: `-n` or `--line-number`
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output:
 <br> `10:        ATPases [ 1 ] . Three isoforms that differ in the ratio of
