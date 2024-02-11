@@ -112,7 +112,7 @@ element is swapped with its corresponding element from the end of the array with
 `<br>`./1471-2202-4-3.txt:          human brain of Haines [ 36 ] , and the same atlas was
 `<br>`./1471-2202-4-3.txt:          addition, the atlas of Paxinos et al. [ 37 ] was
 `<br>`./1471-2202-4-3.txt:          series of densities [ 38 ]` . . . 
-<br> This command line option allows the grep command to interpret patterns as extended regular expressions within the working directory. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ] (Output was shortened)
+<br> This command line option allows the grep command to interpret patterns as extended regular expressions within the working directory. The regular expression is identifying the pattern for [ number ] and returning the search hits that match the pattern. Ex: [9 11] or [ 4 ]. The --directories=recurse option specifies that the command should recurse into directories during its operation, searching for files in subdirectories as well.(Output was shortened)
 
 2. **Option: `-v`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -v 'e' 1471-2091-2-9.txt`
@@ -133,7 +133,7 @@ element is swapped with its corresponding element from the end of the array with
 `<br>`./1471-2121-3-10.txt:
 `<br>`./1471-2172-3-4.txt:
 `<br>`./gb-2002-4-1-r2.txt:` . . .
-<br>Explanation: This option displays all lines in the all text files in the working directory that do not contain the specified 'pattern' which in this case is ' ' (returns all lines that are empty).(Output was shortened)
+<br>Explanation: This option displays all lines in the all text files in the working directory that do not contain the specified 'pattern' which in this case is ' ' (returns all lines that are empty). The --directories=recurse option specifies that the command should recurse into directories during its operation, searching for files in subdirectories as well.(Output was shortened)
 
 3. **Option: `-n` and `-G`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -G '21' 1471-2091-2-9.txt`
@@ -157,7 +157,7 @@ element is swapped with its corresponding element from the end of the array with
 <br>`./1471-2091-2-9.txt:264:        non-hydrolyzable analog of ATP) complexed with VO 2+was
 `<br>`./1471-2199-3-7.txt:37:        stable complexes with non-hydrolyzable ApppA in which two
 `<br>`./1471-2164-3-18.txt:595:        presence of either Mg.ATP or a non-hydrolyzable ATP-analog`
-<br>Explanation: This option makes it easy to find the exact location of the pattern in the files in the working directory by displaying the line numbers as a prefix and the matched lines.  -G option interprets patterns as basic regular expressions, in this case "non-hydrolyzable".
+<br>Explanation: This option makes it easy to find the exact location of the pattern in the files in the working directory by displaying the line numbers as a prefix and the matched lines.  -G option interprets patterns as basic regular expressions, in this case "non-hydrolyzable". The --directories=recurse option specifies that the command should recurse into directories during its operation, searching for files in subdirectories as well.
 
 7. **Option: `-m NUM` and `-F`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -F 'soluble' 1471-2091-2-9.txt`
@@ -175,7 +175,7 @@ element is swapped with its corresponding element from the end of the array with
 `<br>`./ar130.txt:        physical support and critical soluble factors [ 43]. Our
 `<br>`./1471-2253-2-5.txt:          the alveolar values. For extremely soluble solutes such
 `<br>`./1471-2091-2-13.txt:        as a soluble protein in the .` . . .
-<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory. The fixed string is identifying the string "souble" within the text.
+<br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory. The fixed string is identifying the string "souble" within the text. The --directories=recurse option specifies that the command should recurse into directories during its operation, searching for files in subdirectories as well.
 
 Work Cited:
 
