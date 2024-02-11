@@ -64,8 +64,7 @@ element is swapped with its corresponding element from the end of the array with
 
 # Part 2 - Researching Commands
 
-1. **Case-Insensitive Search:**  
-Option: `-E` or `--extended-regexp`
+1. **Option: `-E` or `--extended-regexp`:**  
 <br>Command Line with text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output: 
 <br> `ATPases [ 1 ] . Three isoforms that differ in the ratio of
@@ -116,8 +115,7 @@ Option: `-E` or `--extended-regexp`
 <br> This command line option allows the grep to interpret patterns as extended regular expressions within the working directory. (Output was shortened)
 
 
-2. **Counting the Number of Matches:**
-<br> Option: `-c` or `--count`
+2. **Option: `-c` or `--count`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -c -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output: `35`
 <br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
@@ -136,8 +134,7 @@ pattern in the provided file.
 <br>Explanation: Rather of displaying the actual matching lines, this option counts and shows the number of lines that match the specified 
 pattern in each text file in the working directoy. (Output was shortened)
 
-4. **Displaying Line Numbers with Matches:**
-<br> Option: `-n` or `--line-number`
+3. **Option: `-n` or `--line-number`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -n -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output:
 <br> `10:        ATPases [ 1 ] . Three isoforms that differ in the ratio of
@@ -188,8 +185,7 @@ pattern in each text file in the working directoy. (Output was shortened)
 `<br>`./1471-2202-4-3.txt:475:          series of densities [ 38 ] .` . . .
 <br>Explanation: This option makes it easy to find the exact location of the pattern in the files in the working directory by displaying the line numbers as a prefix and the matched lines. (Output was shortened)
 
-7. **Recursive Search in Directories:**
-<br>Option: `-m NUM` or `--max-count=NUM`
+7. **Option: `-m NUM` or `--max-count=NUM`:**
 <br>Command Line for text file: `norazajzon@Noras-MacBook-Air-2 biomed % grep -m 3 -E '\[ [0-9 ]+ \]' 1471-2091-2-9.txt`
 <br> Output:
 <br>`ATPases [ 1 ] . Three isoforms that differ in the ratio of
@@ -221,3 +217,5 @@ pattern in each text file in the working directoy. (Output was shortened)
 
 Work Cited:
 https://man7.org/linux/man-pages/man1/grep.1.html
+https://chat.openai.com/
+Prompts include: generate a regular expression for grep to find a pattern with the following syntax: [  an unspecified number ]
