@@ -218,3 +218,7 @@ pattern in each text file in the working directoy. (Output was shortened)
 `<br>`./1471-2474-4-8.txt:        [ 8 ] . Data from the National Health and Nutrition
 `<br>`./1471-2474-4-8.txt:        annually [ 9 ] .` . . .
 <br>Explanation: This option in the grep command is used to limit the number of matches returned by grep. It specifies the maximum number of matching lines to be displayed in all files in the working directory.
+
+Work Cited:
+https://man7.org/linux/man-pages/man1/grep.1.html
+https://chat.openai.com/
